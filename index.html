@@ -16,7 +16,15 @@
             padding: 0;
             margin: 0;
         }
-        h1, h2, h3, footer, textarea {
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            color: #12171d;
+            text-shadow: 1px 1px 1px rgb(183, 212, 255);
+        }
+        h1, h2, h3, footer, textarea, button {
             text-align: center;
             align-self: center;
             display: block;
@@ -26,15 +34,21 @@
             border-collapse: collapse;
             padding: 10px;
         }
-        table, textarea {
+        table, textarea, button {
             margin-left:auto; 
             margin-right:auto;
+        }
+        table{
+            width: 800px;
         }
         textarea {
             width: 400px;
         }
-        table, footer {
+        table, footer, button{
             margin-top: 3%;
+        }
+        table, footer, button{
+            margin-top: 1.5%;
         }
         footer {
             background-color: rgb(247, 247, 247);
@@ -48,6 +62,8 @@
     </style>
 </head>
 <body>
+    <button onclick="changeH1Text()">Change H1 text</button>
+
     <div id="title">
         <h1>Smartphone Shop Website</h1>
     </div>
@@ -121,7 +137,11 @@
     </footer>
 
 
-    <script>
+    <script lang="text/javascript">
+        const changeH1Text = function (){
+            let header = document.querySelector("h1")
+            header.innerText="THIS IS THE NEW TITLE OF THE PAGE"
+        }
 
     </script>
 </body>
