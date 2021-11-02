@@ -28,7 +28,7 @@
             display: block;
         }
         table, tr, th, td {
-            border : 1px solid black;
+            border : 1px solid rgb(0, 0, 0);
             border-collapse: collapse;
             padding: 10px;
         }
@@ -60,6 +60,9 @@
         #buttons {
             display: flex;
         }
+        .newClass{
+            border-color: red;
+        }
     </style>
 </head>
 <body>
@@ -67,9 +70,9 @@
         <button onclick="changeH1Text()">Change h1 text</button>
         <button onclick="changeBg()">Change background</button>
         <button onclick="changeFooter()">Change footer address</button>
-        <button onclick="changeH1Text()">Change H1 text</button>
-        <button onclick="changeH1Text()">Change H1 text</button>
-        <button onclick="changeH1Text()">Change H1 text</button>
+        <button onclick="addClass()">Add CSS class to links</button>
+        <button onclick="hideImages()">Hide images</button>
+        <button onclick="changeH1Text()">Color the price</button>
     </div>
 
     <div id="title">
@@ -149,25 +152,26 @@
         
         const changeH1Text = function () {
             let headerTitle = document.querySelector("h1")
-            headerTitle.innerText="THIS IS THE NEW TITLE OF THE PAGE"
+            headerTitle.innerText="THIS IS THE NEW TITLE"
         }
 
         const changeBg = function () {
             let backG = document.body.style.background = "grey"
         }
 
-        /* const changeFooter = function () {
-            let footerAddress = document.getElementsByTagName("footer")
-            footerAddress[1].innerText="Avenida Atlântica 300, Rio de Janeiro - Brazil"
-        } */
-
         const changeFooter = function () {
-            let footerAddress = document.querySelector("footer")
-            footerAddress.innerText="Avenida Atlântica 300, Rio de Janeiro - Brazil"
+            let footerAddress = document.querySelectorAll("footer p")
+            footerAddress[1].innerText="Avenida Atlântica 300, Rio de Janeiro - Brazil"
         }
 
         const addClass = function () {
-            
+            let changeLinks = document.querySelector(/* body.table.tr.td.a */)
+            changeLinks.classList.toggle(".newClass")
+        }
+
+        const hideImages = function () {
+            let imgsToHide = document.querySelector("img")
+            imgsToHide.innerHTML=""
         }
 
     </script>
