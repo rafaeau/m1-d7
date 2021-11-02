@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smartphone Shop Website</title>
     <style>
-        html {
-            background-color: white;
-        }
         body {
+            background-color: white;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 17px;
             color: rgb(32, 33, 36);
@@ -59,10 +57,20 @@
             width: 100%;
             font-weight: bold;
         }
+        #buttons {
+            display: flex;
+        }
     </style>
 </head>
 <body>
-    <button onclick="changeH1Text()">Change H1 text</button>
+    <div id="buttons">
+        <button onclick="changeH1Text()">Change h1 text</button>
+        <button onclick="changeBg()">Change background</button>
+        <button onclick="changeH1Text()">Change H1 text</button>
+        <button onclick="changeH1Text()">Change H1 text</button>
+        <button onclick="changeH1Text()">Change H1 text</button>
+        <button onclick="changeH1Text()">Change H1 text</button>
+    </div>
 
     <div id="title">
         <h1>Smartphone Shop Website</h1>
@@ -138,9 +146,14 @@
 
 
     <script lang="text/javascript">
-        const changeH1Text = function (){
+        
+        const changeH1Text = function () {
             let header = document.querySelector("h1")
             header.innerText="THIS IS THE NEW TITLE OF THE PAGE"
+        }
+
+        const changeBg = function () {
+            let backG = document.body.style.background = "grey"
         }
 
     </script>
