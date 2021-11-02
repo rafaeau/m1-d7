@@ -66,7 +66,7 @@
     <div id="buttons">
         <button onclick="changeH1Text()">Change h1 text</button>
         <button onclick="changeBg()">Change background</button>
-        <button onclick="changeH1Text()">Change H1 text</button>
+        <button onclick="changeFooter()">Change footer address</button>
         <button onclick="changeH1Text()">Change H1 text</button>
         <button onclick="changeH1Text()">Change H1 text</button>
         <button onclick="changeH1Text()">Change H1 text</button>
@@ -122,8 +122,8 @@
         <textarea></textarea>
     </div>
     <footer>
-        <p>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs
-        <br>Frankfurter Allee 150, Berlin Germany</p>
+        <p>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs</p>
+        <p>Frankfurter Allee 150, Berlin - Germany</p>
 
         <a href="https://www.linkedin.com/in/rafaelnevesf/"><svg xmlns="http://www.w3.org/2000/svg" width="30"
                 height="30" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -148,12 +148,26 @@
     <script lang="text/javascript">
         
         const changeH1Text = function () {
-            let header = document.querySelector("h1")
-            header.innerText="THIS IS THE NEW TITLE OF THE PAGE"
+            let headerTitle = document.querySelector("h1")
+            headerTitle.innerText="THIS IS THE NEW TITLE OF THE PAGE"
         }
 
         const changeBg = function () {
             let backG = document.body.style.background = "grey"
+        }
+
+        /* const changeFooter = function () {
+            let footerAddress = document.getElementsByTagName("footer")
+            footerAddress[1].innerText="Avenida Atlântica 300, Rio de Janeiro - Brazil"
+        } */
+
+        const changeFooter = function () {
+            let footerAddress = document.querySelector("footer")
+            footerAddress.innerText="Avenida Atlântica 300, Rio de Janeiro - Brazil"
+        }
+
+        const addClass = function () {
+            
         }
 
     </script>
