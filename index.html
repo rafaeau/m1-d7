@@ -60,8 +60,11 @@
         #buttons {
             display: flex;
         }
-        .newClass{
+        .newClass {
             color: red;
+        }
+        .newClass2 {
+            display: none;
         }
     </style>
 </head>
@@ -172,8 +175,10 @@
         }
 
         const hideImages = function () {
-            let imgsToHide = document.querySelector("img")
-            imgsToHide.innerHTML=""
+            let imgsToHide = document.querySelectorAll("table tr td img")
+            for (let i=0; i<imgsToHide.length; i++){
+                imgsToHide[i].classList.toggle("newClass2")
+            }
         }
 
     </script>
